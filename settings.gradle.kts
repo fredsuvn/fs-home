@@ -20,7 +20,9 @@ rootProject.name = "fs-home"
 
 file(rootDir).listFiles()
   ?.filter { it.isDirectory }
-  ?.filter { it.name.matches(Regex("fs-(?!(recycle|draft)).*")) }
+  ?.filter { it.name.matches(Regex("fs-(?!(recycle|draft|starters)).*")) }
   ?.forEach { include(":${it.name}") }
-// include ":docs"
-// include ":tests"
+file(file("${rootDir.path}/fs-starters")).listFiles()
+  ?.filter { it.isDirectory }
+  ?.filter { it.name.matches(Regex("starter-.*")) }
+  ?.forEach { include(":fs-starters:${it.name}") }

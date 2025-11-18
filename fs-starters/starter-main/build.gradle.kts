@@ -6,17 +6,11 @@ plugins {
   id("fs")
 }
 
-description = "Common tools for fs-home."
+description = "Web application for fs-home."
 
 dependencies {
-
   implementation(platform(project(":fs-dependencies")))
-  api("space.sunqian.common:fs-all")
-
-  //jakarta
-  api("jakarta.annotation:jakarta.annotation-api")
-  // web
-  api("org.apache.tomcat:tomcat-servlet-api")
+  implementation(project(":fs-base"))
 
   testImplementation(platform(project(":fs-dependencies")))
   testImplementation("org.junit.jupiter:junit-jupiter-api")

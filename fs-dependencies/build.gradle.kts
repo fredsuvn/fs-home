@@ -39,6 +39,10 @@ dependencies {
 
     //template
     api("org.apache.velocity:velocity-engine-core:2.3")
+
+    // web
+    api("jakarta.annotation:jakarta.annotation-api:3.0.0")
+    api("org.apache.tomcat:tomcat-servlet-api:11.0.14")
   }
 }
 
