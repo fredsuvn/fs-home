@@ -1,23 +1,26 @@
 pluginManagement {
-    repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
-        mavenCentral()
-        gradlePluginPortal()
+
+  repositories {
+    mavenLocal()
+    maven {
+      val xGradlePluginRepo: String by settings
+      url = uri(xGradlePluginRepo)
     }
-}
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-    }
+    mavenCentral()
+    gradlePluginPortal()
+  }
+
+  plugins {
+    val jmhPluginVersion: String by settings
+    id("me.champeau.jmh") version jmhPluginVersion
+  }
 }
 
-rootProject.name = "Olmi Calendar"
-include(":app")
+rootProject.name = "fs"
+
+file(rootDir).listFiles()
+  ?.filter { it.isDirectory }
+  ?.filter { it.name.matches(Regex("fs-(?!(recycle|draft)).*")) }
+  ?.forEach { include(":${it.name}") }
+// include ":docs"
+// include ":tests"
