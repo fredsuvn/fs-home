@@ -43,6 +43,7 @@ dependencies {
     // web
     api("jakarta.annotation:jakarta.annotation-api:3.0.0")
     api("org.apache.tomcat:tomcat-servlet-api:11.0.14")
+    api("org.apache.tomcat.embed:tomcat-embed-core:11.0.14")
   }
 }
 

@@ -11,6 +11,7 @@ description = "Base of fs-home."
 dependencies {
   implementation(platform(project(":fs-dependencies")))
   api(project(":fs-common"))
+  api("org.apache.tomcat.embed:tomcat-embed-core")
 
   testImplementation(platform(project(":fs-dependencies")))
   testImplementation("org.junit.jupiter:junit-jupiter-api")
