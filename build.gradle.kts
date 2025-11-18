@@ -2,7 +2,7 @@ plugins {
   id("fs")
 }
 
-description = "Root project of fs."
+description = "Root project of fs-home."
 
 rootProject.group = "space.sunqian.fshome"
 
