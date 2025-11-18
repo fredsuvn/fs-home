@@ -16,7 +16,7 @@ pluginManagement {
   }
 }
 
-rootProject.name = "fs"
+rootProject.name = "fs-home"
 
 file(rootDir).listFiles()
   ?.filter { it.isDirectory }
