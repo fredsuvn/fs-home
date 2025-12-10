@@ -3,22 +3,16 @@ plugins {
   //jacoco
   `maven-publish`
   signing
-  id("fs")
+  id("fsh")
 }
 
-description = "Common tools for fs-home."
+description = "Starter for Fs Home."
 
 dependencies {
+  implementation(platform(project(":fsh-dependencies")))
+  implementation(project(":fsh-core"))
 
-  implementation(platform(project(":fs-dependencies")))
-  api("space.sunqian.common:fs-all")
-
-  //jakarta
-  api("jakarta.annotation:jakarta.annotation-api")
-  // web
-  api("org.apache.tomcat:tomcat-servlet-api")
-
-  testImplementation(platform(project(":fs-dependencies")))
+  testImplementation(platform(project(":fsh-dependencies")))
   testImplementation("org.junit.jupiter:junit-jupiter-api")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")

@@ -3,16 +3,16 @@ plugins {
   //jacoco
   `maven-publish`
   signing
-  id("fs")
+  id("fsh")
 }
 
-description = "Web application for fs-home."
+description = "WebDAV application for Fs Home."
 
 dependencies {
-  implementation(platform(project(":fs-dependencies")))
-  implementation(project(":fs-base"))
+  implementation(platform(project(":fsh-dependencies")))
+  api(project(":fsh-core"))
 
-  testImplementation(platform(project(":fs-dependencies")))
+  testImplementation(platform(project(":fsh-dependencies")))
   testImplementation("org.junit.jupiter:junit-jupiter-api")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")

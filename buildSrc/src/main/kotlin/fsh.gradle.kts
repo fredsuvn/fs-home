@@ -1,4 +1,4 @@
-apply(plugin = "fs.build.pLogger")
+apply(plugin = "fsh.build.pLogger")
 
 project.repositories {
   mavenLocal()

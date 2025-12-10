@@ -27,7 +27,7 @@ dependencies {
 gradlePlugin {
   plugins {
     create("pLogger") {
-      id = "fs.build.pLogger"
+      id = "fsh.build.pLogger"
       implementationClass = "PluginLogger"
     }
   }

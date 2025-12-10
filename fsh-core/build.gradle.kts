@@ -3,17 +3,16 @@ plugins {
   jacoco
   `maven-publish`
   signing
-  id("fs")
+  id("fsh")
 }
 
-description = "Base of fs-home."
+description = "Core of Fs Home."
 
 dependencies {
-  implementation(platform(project(":fs-dependencies")))
-  api(project(":fs-common"))
+  implementation(platform(project(":fsh-dependencies")))
   api("org.apache.tomcat.embed:tomcat-embed-core")
 
-  testImplementation(platform(project(":fs-dependencies")))
+  testImplementation(platform(project(":fsh-dependencies")))
   testImplementation("org.junit.jupiter:junit-jupiter-api")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")

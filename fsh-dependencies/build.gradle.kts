@@ -2,10 +2,10 @@ plugins {
   `java-platform`
   `maven-publish`
   signing
-  id("fs")
+  id("fsh")
 }
 
-description = "Dependencies management of fs-home."
+description = "Dependencies management of Fs Home."
 
 javaPlatform {
   allowDependencies()

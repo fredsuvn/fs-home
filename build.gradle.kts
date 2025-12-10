@@ -1,8 +1,8 @@
 plugins {
-  id("fs")
+  id("fsh")
 }
 
-description = "Root project of fs-home."
+description = "Root project of Fs Home."
 
 rootProject.group = "space.sunqian.fshome"
 
