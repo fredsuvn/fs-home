@@ -10,7 +10,9 @@ description = "Starter for Fs Home."
 
 dependencies {
   implementation(platform(project(":fsh-dependencies")))
-  implementation(project(":fsh-core"))
+  file(rootDir.path + "/fsh-apps").listFiles()?.forEach {
+    implementation(project(":fsh-apps:${it.name}"))
+  }
 
   testImplementation(platform(project(":fsh-dependencies")))
   testImplementation("org.junit.jupiter:junit-jupiter-api")

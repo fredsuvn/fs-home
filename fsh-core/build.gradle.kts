@@ -10,6 +10,7 @@ description = "Core of Fs Home."
 
 dependencies {
   implementation(platform(project(":fsh-dependencies")))
+  api("space.sunqian.common:fs-all")
   api("org.apache.tomcat.embed:tomcat-embed-core")
 
   testImplementation(platform(project(":fsh-dependencies")))

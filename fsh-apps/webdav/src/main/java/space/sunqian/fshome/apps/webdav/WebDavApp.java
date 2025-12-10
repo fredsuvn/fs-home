@@ -1,11 +1,11 @@
-package space.sunqian.fshome.base;
+package space.sunqian.fshome.apps.webdav;
 
 import jakarta.annotation.PostConstruct;
 import org.apache.catalina.Wrapper;
 import org.apache.catalina.servlets.WebdavServlet;
 import org.apache.catalina.startup.Tomcat;
 
-public class BaseApp {
+public class WebDavApp {
 
     @PostConstruct
     public void start() throws Exception {
