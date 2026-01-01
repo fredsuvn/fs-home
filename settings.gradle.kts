@@ -24,5 +24,5 @@ file(rootDir).listFiles()
   ?.forEach { include(":${it.name}") }
 file(file("${rootDir.path}/fsh-apps")).listFiles()
   ?.filter { it.isDirectory }
-  //?.filter { it.name.matches(Regex("starter-.*")) }
+  ?.filter { it.name.matches(Regex("fsh-app-.*")) }
   ?.forEach { include(":fsh-apps:${it.name}") }

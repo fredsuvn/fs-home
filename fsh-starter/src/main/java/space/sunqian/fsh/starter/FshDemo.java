@@ -11,6 +11,7 @@ public class FshDemo {
         InjectedApp app = InjectedApp.newBuilder()
             .resourceTypes(SomeApp.class)
             .build();
+        app.shutdown();
     }
 
     public static class SomeApp {

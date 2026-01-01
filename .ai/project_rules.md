@@ -22,6 +22,7 @@
 - 项目有四个大模块，根包名是，`space.sunqian.fsh`：
   - 项目依赖（fsh-dependencies）：一个pom项目，包含所有项目的依赖；
   - 项目核心（fsh-core）：项目的核心功能，其他模块都依赖于此模块，包名是`space.sunqian.fsh.core`；
+  - 项目Web（fsh-web）：项目的Web模块，提供基础Web功能，包名是`space.sunqian.fsh.web`；
   - 项目启动器（fsh-starter）：项目的启动器，用来启动项目，包名是`space.sunqian.fsh.starter`；
   - 项目应用（fsh-app）：严格的来说，这是一个模块集合，包名是`space.sunqian.fsh.apps`，里面的每个子目录（子模块）都是一个项目的应用，应用的包名是
     `space.sunqian.fsh.apps.应用名`，应用里的.ai/app_rules.md文件定义了应用的规则；

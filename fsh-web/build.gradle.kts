@@ -1,22 +1,17 @@
 plugins {
   `java-library`
-  //jacoco
+  jacoco
   `maven-publish`
   signing
   id("fsh")
 }
 
-description = "Starter for Fs Home."
+description = "Web module of fsh, provides web functions."
 
 dependencies {
   implementation(platform(project(":fsh-dependencies")))
-  implementation(project(":fsh-web"))
-  file(rootDir.path + "/fsh-apps")
-    .listFiles()
-    ?.filter { it.name.matches(Regex("fsh-app-.*")) }
-    ?.forEach {
-      implementation(project(":fsh-apps:${it.name}"))
-    }
+  api(project(":fsh-core"))
+  api("org.apache.tomcat.embed:tomcat-embed-core")
 
   testImplementation(platform(project(":fsh-dependencies")))
   testImplementation("org.junit.jupiter:junit-jupiter-api")
