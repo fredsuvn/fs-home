@@ -15,7 +15,7 @@ dependencies {
   constraints {
 
     // fs
-    api("space.sunqian.common:fs-all:0.0.0")
+    api("space.sunqian.common:fs-all:0.0.0-SNAPSHOT")
 
     //lombok
     api("org.projectlombok:lombok:1.18.30")
