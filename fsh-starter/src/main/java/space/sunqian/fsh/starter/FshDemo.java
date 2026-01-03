@@ -2,8 +2,8 @@ package space.sunqian.fsh.starter;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.Resource;
-import space.sunqian.common.app.di.InjectedApp;
-import space.sunqian.common.base.system.JvmKit;
+import space.sunqian.fs.app.di.InjectedApp;
+import space.sunqian.fs.base.system.JvmKit;
 
 public class FshDemo {
 

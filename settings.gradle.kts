@@ -20,9 +20,10 @@ rootProject.name = "fsh"
 
 file(rootDir).listFiles()
   ?.filter { it.isDirectory }
-  ?.filter { it.name.matches(Regex("fsh-(?!(recycle|draft|apps)).*")) }
+  ?.filter { it.name.matches(Regex("fsh-(?!(recycle|draft)).*")) }
   ?.forEach { include(":${it.name}") }
-file(file("${rootDir.path}/fsh-apps")).listFiles()
+// apps
+file(file("${rootDir.path}/fsh-app")).listFiles()
   ?.filter { it.isDirectory }
   ?.filter { it.name.matches(Regex("fsh-app-.*")) }
-  ?.forEach { include(":fsh-apps:${it.name}") }
+  ?.forEach { include(":fsh-app:${it.name}") }

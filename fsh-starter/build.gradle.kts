@@ -11,11 +11,12 @@ description = "Starter for Fs Home."
 dependencies {
   implementation(platform(project(":fsh-dependencies")))
   implementation(project(":fsh-web"))
-  file(rootDir.path + "/fsh-apps")
+  implementation(project(":fsh-app"))
+  file(rootDir.path + "/fsh-app")
     .listFiles()
     ?.filter { it.name.matches(Regex("fsh-app-.*")) }
     ?.forEach {
-      implementation(project(":fsh-apps:${it.name}"))
+      implementation(project(":fsh-app:${it.name}"))
     }
 
   testImplementation(platform(project(":fsh-dependencies")))

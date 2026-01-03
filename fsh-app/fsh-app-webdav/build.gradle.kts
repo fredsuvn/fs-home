@@ -1,16 +1,16 @@
 plugins {
   `java-library`
-  jacoco
+  //jacoco
   `maven-publish`
   signing
   id("fsh")
 }
 
-description = "Core of fsh, provides core and common functions."
+description = "WebDAV application for Fs Home."
 
 dependencies {
   implementation(platform(project(":fsh-dependencies")))
-  api("space.sunqian.fs:fs-all")
+  api(project(":fsh-app"))
 
   testImplementation(platform(project(":fsh-dependencies")))
   testImplementation("org.junit.jupiter:junit-jupiter-api")

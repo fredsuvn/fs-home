@@ -1,12 +1,12 @@
 plugins {
   `java-library`
-  //jacoco
+  jacoco
   `maven-publish`
   signing
   id("fsh")
 }
 
-description = "WebDAV application for Fs Home."
+description = "Root app module of fsh."
 
 dependencies {
   implementation(platform(project(":fsh-dependencies")))

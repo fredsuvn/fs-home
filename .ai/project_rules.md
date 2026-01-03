@@ -24,8 +24,8 @@
   - 项目核心（fsh-core）：项目的核心功能，其他模块都依赖于此模块，包名是`space.sunqian.fsh.core`；
   - 项目Web（fsh-web）：项目的Web模块，提供基础Web功能，包名是`space.sunqian.fsh.web`；
   - 项目启动器（fsh-starter）：项目的启动器，用来启动项目，包名是`space.sunqian.fsh.starter`；
-  - 项目应用（fsh-app）：严格的来说，这是一个模块集合，包名是`space.sunqian.fsh.apps`，里面的每个子目录（子模块）都是一个项目的应用，应用的包名是
-    `space.sunqian.fsh.apps.应用名`，应用里的.ai/app_rules.md文件定义了应用的规则；
+  - 项目应用（fsh-app）：项目的应用模块，包名是`space.sunqian.fsh.app`，里面的每个子目录（子模块）都是一个项目的应用，应用的包名是
+    `space.sunqian.fsh.app.应用名`，应用里的.ai/app_rules.md文件定义了应用的规则；
 - 这个项目是一个用于家庭NAS的项目，包括以下几个功能：
   - 用户体系：统一管理项目的租户，用户，群组，权限等；
   - 应用体系：项目可以看成是一个应用平台，各种不同的应用（fsh-app中的）都可以在应用管理页面中管理、跳转；
